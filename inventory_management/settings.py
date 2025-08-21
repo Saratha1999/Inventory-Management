@@ -60,8 +60,9 @@ ROOT_URLCONF = 'inventory_management.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'inventory' / 'templates'], 
-        'APP_DIRS': True,
+        # Look for templates in BASE_DIR/inventory/templates AND in app directories
+        'DIRS': [os.path.join(BASE_DIR, 'inventory', 'templates')],
+        'APP_DIRS': True,  # Enables finding templates inside each app's "templates" folder
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -72,6 +73,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'inventory_management.wsgi.application'
 
