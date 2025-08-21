@@ -9,7 +9,7 @@ from inventory_management.settings import LOW_QUANTITY
 from django.contrib import messages
 
 class Index(TemplateView):
-	template_name = 'inventory/index.html'
+	template_name = 'index.html'
 
 class Dashboard(LoginRequiredMixin, View):
 	def get(self, request):
