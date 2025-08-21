@@ -61,7 +61,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Look for templates in BASE_DIR/inventory/templates AND in app directories
-        'DIRS': [os.path.join(BASE_DIR, 'inventory', 'templates')],
+        'DIRS': [BASE_DIR / 'inventory' / 'templates' / 'inventory'],
         'APP_DIRS': True,  # Enables finding templates inside each app's "templates" folder
         'OPTIONS': {
             'context_processors': [
