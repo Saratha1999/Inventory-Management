@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "unsafe-fallback-key")
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 
 # Application definition
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'inventory_management.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'inventory' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
