@@ -27,8 +27,7 @@ Production Server: Gunicorn
 
 Reverse Proxy: Nginx
 
-
-Project Setup Guide
+## Project Setup Guide
 
 ## Prerequisites
 
